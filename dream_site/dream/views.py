@@ -1,27 +1,24 @@
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render
 
-menu = ["Курсы", "Учителя", "Новости", "Галерея", "Тесты"]
-
-
 def index(request):
-    return render(request, 'dream/index.html', {'memu': menu, 'title': 'American Dream Osh'})
+    return render(request, 'dream/index.html')
 
 
-def courses(request, course_id):
-    return render(request, 'dream/course.html', {'memu': menu, 'title': 'American Dream Osh'})
+def course(request):
+    return render(request, 'dream/course.html')
 
 
 def teachers(request):
-    return render(request, 'dream/teachers.html', {'memu': menu, 'title': 'American Dream Osh'})
+    return render(request, 'dream/teachers.html')
 
 
 def news(request):
-    return render(request, 'dream/news.html', {'memu': menu, 'title': 'American Dream Osh'})
+    return render(request, 'dream/news.html')
 
 
 def gallery(request):
-    return render(request, 'dream/gallery.html', {'memu': menu, 'title': 'American Dream Osh'})
+    return render(request, 'dream/gallery.html')
 
 
 def dream_tests(request):

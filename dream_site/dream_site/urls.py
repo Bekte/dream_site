@@ -21,9 +21,8 @@ from dream.views import *
 from dream_site import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', include('dream.urls')),
-
+    path('admin/', admin.site.urls),
 ]
 
 if settings.DEBUG:

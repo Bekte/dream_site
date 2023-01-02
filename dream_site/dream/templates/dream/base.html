@@ -9,8 +9,8 @@
     <title>Admin Adosh</title>
 
     <!-- ======= Styles =l===== -->
-    <link type="text/css" href="{% 'dream/css/style.css' %}" rel="stylesheet" />
-    <link rel="stylesheet" href="./dream/css/main.css">
+    <link type="text/css" href="{% static 'dream/css/style.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'dream/css/main.css' %}" type="img/x-icon"/>
 
     <link rel="shortcut icon" href="./dream/img/logo.png" type="image/x-icon">
 </head>
@@ -31,7 +31,7 @@
                 </li>
 
                 <li class="hovered">
-                    <a href="course.html">
+                    <a href="{% url 'course' %}">
                         <span class="icon">
                             <ion-icon name="book"></ion-icon>
                         </span>
@@ -41,7 +41,7 @@
                 </li>
 
                 <li>
-                    <a href="teachers.html">
+                    <a href="{% url 'teachers' %}">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
@@ -50,7 +50,7 @@
                 </li>
 
                 <li>
-                    <a href="news.html">
+                    <a href="{% url 'news/' %}">
                         <span class="icon">
                             <ion-icon name="chatbubble-outline"></ion-icon>
                         </span>
@@ -59,7 +59,7 @@
                 </li>
 
                 <li>
-                    <a href="gallery.html">
+                    <a href="{% url 'gallery/' %}">
                         <span class="icon">
                             <ion-icon name="images"></ion-icon>
                         </span>
