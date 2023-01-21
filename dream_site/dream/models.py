@@ -47,3 +47,53 @@ class Gallery(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class TransferTest(models.Model):
+    categories = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.categories
+
+
+class Categories(models.Model):
+    title = models.CharField(max_length=255)
+    parent_id = models.IntegerField(blank=True)
+
+    def __str__(self):
+        return self.title
+
+
+class Tasks(models.Model):
+    text = models.CharField(max_length=255)
+    category_id = models.IntegerField(blank=True)
+
+    def __str__(self):
+        return self.text
+
+
+class Questions(models.Model):
+    text = models.CharField(max_length=255)
+    category_id = models.IntegerField(blank=True)
+    task_id = models.IntegerField(blank=True)
+
+    def __str__(self):
+        return self.text
+
+
+class TaskInputOptions(models.Model):
+    text = models.CharField(max_length=255)
+    is_correct = models.BooleanField(blank=True)
+    task_input_id = models.IntegerField(blank=True)
+    task_id = models.IntegerField(blank=True)
+
+    def __str__(self):
+        return self.text
+
+
+class TaskInputs(models.Model):
+    position = models.IntegerField(blank=True)
+    task_id = models.IntegerField(blank=True)
+
+    def __str__(self):
+        return self.position
